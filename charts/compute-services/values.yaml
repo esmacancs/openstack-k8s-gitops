@@ -1,13 +1,13 @@
 # Global image overrides for containerd v2.1+ compatibility
 images:
   tags:
-    dep_check: docker.io/library/busybox:1.36
+    dep_check: local/kubernetes-entrypoint:v1.0.0
 
 nova:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
   endpoints:
     compute:
       host_fqdn_override:
@@ -18,7 +18,7 @@ heat:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
   endpoints:
     orchestration:
       host_fqdn_override:
@@ -29,7 +29,7 @@ horizon:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
   endpoints:
     dashboard:
       host_fqdn_override:
@@ -40,22 +40,22 @@ barbican:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
 
 magnum:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
 
 manila:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
 
 octavia:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0

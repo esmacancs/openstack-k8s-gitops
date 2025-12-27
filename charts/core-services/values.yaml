@@ -1,19 +1,18 @@
 # Global image overrides for containerd v2.1+ compatibility
 images:
   tags:
-    dep_check: docker.io/library/busybox:1.36
-    image_repo_sync: docker.io/library/docker:17.07.0
+    dep_check: local/kubernetes-entrypoint:v1.0.0
 
 keystone:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
   endpoints:
     identity:
       host_fqdn_override:
         public:
-          host: identity.your-domain.com  # Update for new cluster
+          host: identity.your-domain.com
       port:
         api:
           public: 443
@@ -24,7 +23,7 @@ glance:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
   endpoints:
     image:
       host_fqdn_override:
@@ -35,13 +34,13 @@ placement:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
 
 neutron:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
   endpoints:
     network:
       host_fqdn_override:
@@ -52,7 +51,7 @@ cinder:
   enabled: true
   images:
     tags:
-      dep_check: docker.io/library/busybox:1.36
+      dep_check: local/kubernetes-entrypoint:v1.0.0
   endpoints:
     volumev3:
       host_fqdn_override:
