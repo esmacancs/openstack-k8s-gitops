@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: openstack-exporter
+  labels:
+    app: openstack-exporter
+spec:
+  ports:
+  - port: 9180
+    name: metrics
+  selector:
+    app: openstack-exporter
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: openstack-exporter
+  labels:
+    app: openstack-exporter
+spec:
+  selector:
+    matchLabels:
+      app: openstack-exporter
+  endpoints:
+  - port: metrics
+    interval: 30s
+    path: /metrics

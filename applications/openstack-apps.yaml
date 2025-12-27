@@ -1,0 +1,83 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openstack-operators
+  namespace: argocd
+spec:
+  project: openstack
+  source:
+    repoURL: https://github.com/your-org/openstack-gitops.git
+    path: charts/operators
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: openstack
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openstack-infrastructure
+  namespace: argocd
+spec:
+  project: openstack
+  source:
+    repoURL: https://github.com/your-org/openstack-gitops.git
+    path: charts/infrastructure
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: openstack
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openstack-core-services
+  namespace: argocd
+spec:
+  project: openstack
+  source:
+    repoURL: https://github.com/your-org/openstack-gitops.git
+    path: charts/core-services
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: openstack
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openstack-compute-services
+  namespace: argocd
+spec:
+  project: openstack
+  source:
+    repoURL: https://github.com/your-org/openstack-gitops.git
+    path: charts/compute-services
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: openstack
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

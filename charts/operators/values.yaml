@@ -1,0 +1,5 @@
+pxc-operator:
+  enabled: true
+
+rabbitmq-cluster-operator:
+  enabled: true

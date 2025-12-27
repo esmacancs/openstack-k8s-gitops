@@ -1,0 +1,27 @@
+# Fresh Cluster Configuration
+
+# Update these values for your new cluster
+global:
+  cluster_domain: cluster.local
+  external_domain: your-domain.com  # Change this
+
+# Node labels for scheduling (update based on your nodes)
+labels:
+  control_plane: openstack-control-plane=enabled
+  compute_node: openstack-compute-node=enabled
+  storage_node: openstack-storage-node=enabled
+
+# Storage classes (update based on your cluster)
+storage:
+  default_class: standard  # Change to your default storage class
+  ceph_class: rook-ceph-block  # If using Rook Ceph
+
+# Load balancer configuration
+loadbalancer:
+  type: LoadBalancer  # or NodePort/ClusterIP based on your setup
+  
+# Ingress configuration  
+ingress:
+  enabled: true
+  class: nginx  # Change to your ingress controller
+  tls: false    # Set to true if you have TLS certificates

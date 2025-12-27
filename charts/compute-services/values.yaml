@@ -1,0 +1,35 @@
+nova:
+  enabled: true
+  endpoints:
+    compute:
+      host_fqdn_override:
+        public:
+          host: compute.192-168-122-70.nip.io
+
+heat:
+  enabled: true
+  endpoints:
+    orchestration:
+      host_fqdn_override:
+        public:
+          host: orchestration.192-168-122-70.nip.io
+
+horizon:
+  enabled: true
+  endpoints:
+    dashboard:
+      host_fqdn_override:
+        public:
+          host: dashboard.192-168-122-70.nip.io
+
+barbican:
+  enabled: true
+
+magnum:
+  enabled: true
+
+manila:
+  enabled: true
+
+octavia:
+  enabled: true

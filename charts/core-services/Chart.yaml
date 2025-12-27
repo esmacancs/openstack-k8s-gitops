@@ -1,0 +1,22 @@
+apiVersion: v2
+name: openstack-core-services
+description: OpenStack core services
+type: application
+version: 0.1.0
+appVersion: "1.0"
+dependencies:
+  - name: keystone
+    version: 0.3.17
+    repository: https://tarballs.opendev.org/openstack/openstack-helm/
+  - name: glance
+    version: 0.4.15
+    repository: https://tarballs.opendev.org/openstack/openstack-helm/
+  - name: placement
+    version: 0.3.9
+    repository: https://tarballs.opendev.org/openstack/openstack-helm/
+  - name: neutron
+    version: 0.3.47
+    repository: https://tarballs.opendev.org/openstack/openstack-helm/
+  - name: cinder
+    version: 0.3.23
+    repository: https://tarballs.opendev.org/openstack/openstack-helm/

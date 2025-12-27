@@ -1,0 +1,9 @@
+memcached:
+  enabled: true
+  pod:
+    replicas:
+      server: 1
+
+valkey:
+  enabled: true
+  architecture: standalone

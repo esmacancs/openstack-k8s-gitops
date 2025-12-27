@@ -1,0 +1,13 @@
+apiVersion: v2
+name: openstack-infrastructure
+description: OpenStack infrastructure services
+type: application
+version: 0.1.0
+appVersion: "1.0"
+dependencies:
+  - name: memcached
+    version: 0.1.12
+    repository: https://tarballs.opendev.org/openstack/openstack-helm-infra/
+  - name: valkey
+    version: 2.4.6
+    repository: https://charts.bitnami.com/bitnami

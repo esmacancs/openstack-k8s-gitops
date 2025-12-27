@@ -1,0 +1,39 @@
+keystone:
+  enabled: true
+  endpoints:
+    identity:
+      host_fqdn_override:
+        public:
+          host: identity.your-domain.com  # Update for new cluster
+      port:
+        api:
+          public: 443
+      scheme:
+        public: https
+
+glance:
+  enabled: true
+  endpoints:
+    image:
+      host_fqdn_override:
+        public:
+          host: image.192-168-122-70.nip.io
+
+placement:
+  enabled: true
+
+neutron:
+  enabled: true
+  endpoints:
+    network:
+      host_fqdn_override:
+        public:
+          host: network.192-168-122-70.nip.io
+
+cinder:
+  enabled: true
+  endpoints:
+    volumev3:
+      host_fqdn_override:
+        public:
+          host: volume.192-168-122-70.nip.io

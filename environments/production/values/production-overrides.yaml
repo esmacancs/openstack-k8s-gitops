@@ -1,0 +1,31 @@
+# Production overrides for OpenStack services
+global:
+  environment: production
+  
+# High availability settings
+keystone:
+  pod:
+    replicas:
+      api: 3
+
+nova:
+  pod:
+    replicas:
+      api_metadata: 2
+      api_osapi: 3
+      conductor: 3
+      scheduler: 2
+
+neutron:
+  pod:
+    replicas:
+      server: 3
+
+# Resource limits for production
+resources:
+  limits:
+    memory: "2Gi"
+    cpu: "1000m"
+  requests:
+    memory: "1Gi"
+    cpu: "500m"
