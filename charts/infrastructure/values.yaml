@@ -1,5 +1,13 @@
+# Global image overrides for containerd v2.1+ compatibility
+images:
+  tags:
+    dep_check: docker.io/library/busybox:1.36
+
 memcached:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
   pod:
     replicas:
       server: 1

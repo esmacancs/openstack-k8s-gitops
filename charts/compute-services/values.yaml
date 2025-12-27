@@ -1,5 +1,13 @@
+# Global image overrides for containerd v2.1+ compatibility
+images:
+  tags:
+    dep_check: docker.io/library/busybox:1.36
+
 nova:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
   endpoints:
     compute:
       host_fqdn_override:
@@ -8,6 +16,9 @@ nova:
 
 heat:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
   endpoints:
     orchestration:
       host_fqdn_override:
@@ -16,6 +27,9 @@ heat:
 
 horizon:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
   endpoints:
     dashboard:
       host_fqdn_override:
@@ -24,12 +38,24 @@ horizon:
 
 barbican:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
 
 magnum:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
 
 manila:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
 
 octavia:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36

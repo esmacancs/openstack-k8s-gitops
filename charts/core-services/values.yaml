@@ -1,5 +1,14 @@
+# Global image overrides for containerd v2.1+ compatibility
+images:
+  tags:
+    dep_check: docker.io/library/busybox:1.36
+    image_repo_sync: docker.io/library/docker:17.07.0
+
 keystone:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
   endpoints:
     identity:
       host_fqdn_override:
@@ -13,6 +22,9 @@ keystone:
 
 glance:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
   endpoints:
     image:
       host_fqdn_override:
@@ -21,9 +33,15 @@ glance:
 
 placement:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
 
 neutron:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
   endpoints:
     network:
       host_fqdn_override:
@@ -32,6 +50,9 @@ neutron:
 
 cinder:
   enabled: true
+  images:
+    tags:
+      dep_check: docker.io/library/busybox:1.36
   endpoints:
     volumev3:
       host_fqdn_override:
