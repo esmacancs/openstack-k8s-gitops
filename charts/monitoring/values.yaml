@@ -1,0 +1,14 @@
+# OpenStack Monitoring Configuration
+monitoring:
+  enabled: true
+  
+# ServiceMonitor configuration
+servicemonitor:
+  enabled: false  # Disable until Prometheus operator is installed
+  
+# Placeholder for future monitoring components
+prometheus:
+  enabled: false
+  
+grafana:
+  enabled: false
