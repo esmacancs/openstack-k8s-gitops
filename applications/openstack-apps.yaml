@@ -6,7 +6,7 @@ metadata:
 spec:
   project: openstack
   source:
-    repoURL: https://github.com/your-org/openstack-gitops.git
+    repoURL: https://github.com/esmacancs/openstack-k8s-gitops.git
     path: charts/operators
     targetRevision: HEAD
   destination:
@@ -27,7 +27,7 @@ metadata:
 spec:
   project: openstack
   source:
-    repoURL: https://github.com/your-org/openstack-gitops.git
+    repoURL: https://github.com/esmacancs/openstack-k8s-gitops.git
     path: charts/infrastructure
     targetRevision: HEAD
   destination:
@@ -48,7 +48,7 @@ metadata:
 spec:
   project: openstack
   source:
-    repoURL: https://github.com/your-org/openstack-gitops.git
+    repoURL: https://github.com/esmacancs/openstack-k8s-gitops.git
     path: charts/core-services
     targetRevision: HEAD
   destination:
@@ -69,7 +69,7 @@ metadata:
 spec:
   project: openstack
   source:
-    repoURL: https://github.com/your-org/openstack-gitops.git
+    repoURL: https://github.com/esmacancs/openstack-k8s-gitops.git
     path: charts/compute-services
     targetRevision: HEAD
   destination:

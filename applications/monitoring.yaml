@@ -6,7 +6,7 @@ metadata:
 spec:
   project: openstack
   source:
-    repoURL: https://github.com/your-org/openstack-gitops.git
+    repoURL: https://github.com/esmacancs/openstack-k8s-gitops.git
     path: charts/monitoring
     targetRevision: HEAD
   destination:
